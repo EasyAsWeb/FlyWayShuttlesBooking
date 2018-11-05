@@ -8,7 +8,7 @@
     <meta name="Description" content="Rights Non-Profit Template">
     <meta name="keywords" content="non-profit, child">
 
-    <title>Contact Us | Rights</title>
+    <title>FlyWay Shuttles</title>
  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
         <link href= "http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
@@ -25,34 +25,7 @@
   <!-- DatePicker JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
               <meta charset="UTF-8">
-        <style>
-       input {
-    width: 100%;
-    padding: 12px 50px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    
-}
-.container {
-width: 40%; 
-margin-left: auto;
-margin-right: auto;  
-border-radius: 5px ;
-background-color: #d7dbdd;
-padding: 20px;
-box-sizing: border-box;
-border: 2px solid #ccc;
-}
-label {
-    font-family: Arial
-}
-.head {
-    font-family: Arial;
-    font-weight: normal;
-}
-</style>
+
 
    <!-- favicons
     ============================================= -->
@@ -202,30 +175,67 @@ label {
         </div>
     </div>
 </header>
-
+<section id="contact-form" class="section bg-default default-section-padding">
+	<div class="container">
+		<div class="row">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="contactus-brief">
+				<BR>
+					<h3>BOOK A SHUTTLE</h3>
+					
+				</div>
+			</div>
+		</div>
  
-<form class= container>
-        <fieldset id="fieldsetRoute">
-                <h2 class=head>Calculate shuttle Route</h2>
-               
-
+<form>
+        <fieldset id="fieldsetRoute">           
+                             
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="InputName" class="dark-text">ORIGIN<super>*<super></label>
+                        <input type="text" class="form-control form-control-dark" id="Origin" name="Origin" placeholder="Enter Origin" required>
+                      </div>
+                    </div>
+					
+					<div class="col-md-4">
+                    <div class="form-group">
+                      <label for="InputName" class="dark-text">DESTINATION<super>*<super></label>
+                        <input type="text" class="form-control form-control-dark" id="Destination" name="Destination" placeholder="Enter Destination" required>
+                      </div>
+                    </div>
                 
-                <div class="dark-text"> <label >Origin: </label><br>
-                <input type="text" id="Origin" name="Origin" placeholder="Enter Origin" required></div><br>
-                
-                <div class="dark-text"> <label>Destination: </label><br>
-                <input type="text" id="Destination" name="Destination" placeholder="Enter Destination" required></div><br>
-                
-                <div class="col-lg-12" > <label>Pickup Date / Time : </label><br>
+                <div class="col-lg-4" > 
+				<div class="form-group">
+				
+				<label for="InputName" class="dark-text">PICKUP DATE &amp; TIME <super>*<super></label><br>
                         <input type="text"  name="dttm" id="dttm" data-date-max-date="3000-12-31" class="form-control input-sm" required placeholder="Enter Date and Time"/>
-               <div>
-                      <button  class="col-sm-7" id="DisatnceFare" name="DisatnceFare" class="button" type="button" >Submit
-                          </div>
-                        </button>
+						<br>
 
-                        <textarea readonly id='ticket' rows="4" cols="50" placeholder="calculate fare to generate booking ticket ">
-                               ticket
+						</div>
+						</div>
+						
+				<div class="col-lg-4" > 
+				<div class="form-group">
+
+
+                      <BUTTON   id="DisatnceFare" name="DisatnceFare" class="btn btn-charity-default" type="button" title=""> SUBMIT
+                          
+                        </BUTTON>
+						</div>
+						</div>
+						
+											<div class="col-sm-12">
+						<div class="form-group">
+							<label for="message" class="dark-text"> TRIP SUMMARY</label>
+							                        <textarea readonly id='ticket' rows="4" cols="50" placeholder="calculate fare to generate booking ticket " class="form-control form-control-dark" >
+                               
                                 </textarea>
+						</div>
+
+					</div>
+						
+
         </fieldset>
   </form>
 
@@ -242,84 +252,12 @@ min_date.setMinutes(min_date.getMinutes()+120);
 </script>  
     
 
+		</div>
+	</div>
+</section>
 
 
 
-<section class="footer-widgets pad-extra">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="widgets-content footer-widget-wrap">
-					<h3 class="widgets-title">About Rights</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur is a adipiscing elit. Nulla convallis egestas oncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
-					<div class="footer-social">
-						<a href="#"><i class="fa fa-facebook-f"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-youtube-play"></i></a>
-					</div>
-				</div>
-			</div> <!-- /.col-md-4 -->
-
-			<div class="col-md-4">
-				<div class="footer-widget-wrap">
-					<div class="row">
-						<div class="col-md-11 col-md-offset-1">
-							<h3 class="widgets-title">quick links</h3>
-						</div>
-						<div class="col-md-5 col-md-offset-1">
-							<div class="widgets-content">
-								<ul class="widgets-list">
-									<li><a href="#">Causes</a></li>
-									<li><a href="#">Projected</a></li>
-									<li><a href="#">Gallery</a></li>
-									<li><a href="#">Solution</a></li>
-									<li><a href="#">Sports</a></li>								
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="widgets-content">					
-								<ul class="widgets-list">
-									<li><a href="#">Terms of use</a></li>
-									<li><a href="#">Legal</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-									<li><a href="#">Latest News</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4">
-				<div class="widgets-content">
-					<h3 class="widgets-title">Contact Info</h3>
-					<div class="office map">
-						<p>
-							<span>Head office</span>
-							<br>
-							Address: 8 king street, Melbourne 89 AUS
-							<br>
-							Phone: +22 6 4567 8900
-						</p>
-
-						<p>
-							<span>Sub office</span>
-							<br>
-							Address: 8 queen street, California 89 USA
-							<br>
-							Phone: +22 6 4567 8900
-						</p>
-					</div>
-				</div>
-			</div> <!-- /.col-md-4 -->
-
-		</div> <!-- /.row -->
-	</div> <!-- /.container -->
-</section> <!-- /.footer-widgets -->
 
 <footer id="footer" class="section footer">
     <div class="container">
