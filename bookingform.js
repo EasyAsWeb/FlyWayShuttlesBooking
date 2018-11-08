@@ -75,7 +75,7 @@ min_date.setMinutes(min_date.getMinutes()-0.5);
                         //alert ("distance :"+ distance_in_kilo +" kms " + "fare: "+ fare )
                         $('#ticket').text('From :'+origin+
                         " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\n Date-Time:"+ dttm_val);
-                       
+                       $('#Buyticket').data('item-quantity', distance_in_kilo);
                       }
                     }
                   }
