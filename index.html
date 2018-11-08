@@ -212,10 +212,21 @@
 							                        <textarea readonly id='ticket' rows="4" cols="50" placeholder="calculate fare to generate booking ticket " class="form-control form-control-dark" >
                                
                                 </textarea>
+								
+								<button
+									class="snipcart-add-item"
+									data-item-id="2"
+									data-item-name="Ticket"
+									data-item-price="3.00"
+									data-item-quantity="1"
+									data-item-url="https://flywayshuttles.co.nz/Ticket"
+									data-item-description="Ticket">
+									Buy Ticket
+								</button>	
 						</div>
 
 					</div>
-						
+					
 
         </fieldset>
   </form>
@@ -226,7 +237,7 @@
  var min_date= new Date();  
 min_date.setMinutes(min_date.getMinutes()+120); 
   $('#dttm').datetimepicker({
-    format: 'YYYY-MM-DD HH:mm A',
+    format: 'YYYY-MM-DD hh:mm A',
     minDate: min_date,
 	 
     });
@@ -434,6 +445,8 @@ min_date.setMinutes(min_date.getMinutes()+120);
 
 <script src="assets/js/main.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDaqml-GXgNO5R6nO4g3X78HNjJ7TqeUPo&libraries=places"></script>
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="OTc2YjgyMWUtYmZjOC00OWYxLTlhZTktYmZmZWYwYzA0MDExNjM2NzYxNzY3OTI0ODIyMTcx"></script>
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
 <script src="bookingform.js"></script>
 
 </body>

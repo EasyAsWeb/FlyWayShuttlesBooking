@@ -71,10 +71,10 @@ min_date.setMinutes(min_date.getMinutes()-0.5);
                         var duration_text = duration.text;
                         var duration_value = duration.value;
                         trip_duration = duration.text;
-                        //alert (origin+" -- to --: " + destination)
+                        var dttm_val=$('#dttm').val();
                         //alert ("distance :"+ distance_in_kilo +" kms " + "fare: "+ fare )
                         $('#ticket').text('From :'+origin+
-                        " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare );
+                        " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\n Date-Time:"+ dttm_val);
                        
                       }
                     }
