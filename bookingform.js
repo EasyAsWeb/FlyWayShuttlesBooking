@@ -79,8 +79,8 @@ var errc=0;
 						
                         $('#ticket').text('From :'+origin+
                         " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\nDate-Time:"+ dttm_val);
-                       $('#Buyticket').data('item-name', distance_in_kilo);
-					   $('#Buyticket').data('item-description', origin +"::to::" +destination);
+                       $('#Buyticket').data('item-quantity', distance_in_kilo);
+			 $('#Buyticket').data('item-name', origin +"::to::" +destination);
 					   
 						document.getElementById('welcomeDiv').style.display = "block";
 						}
