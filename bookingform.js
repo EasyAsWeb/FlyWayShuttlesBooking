@@ -1,7 +1,6 @@
 var min_date= new Date();  
 min_date.setMinutes(min_date.getMinutes()-0.5); 
-
-
+var errc=0; 
 
 
  
@@ -59,6 +58,10 @@ min_date.setMinutes(min_date.getMinutes()-0.5);
                       if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
                         $('#result').html("Better get on a plane. There are no roads between " + origin + " and " + destination);
                       } else {
+						if (origin.length ==0){alert ("Enter Valid Origin "); }
+						else if (destination.length == 0){alert ("Enter Valid Destination ");}
+						else {
+						  
                         var distance = response.rows[0].elements[0].distance;
                         var duration = response.rows[0].elements[0].duration;
                         var fare_calc = (distance.value / 1000) * 3; // the mile
@@ -73,9 +76,14 @@ min_date.setMinutes(min_date.getMinutes()-0.5);
                         trip_duration = duration.text;
                         var dttm_val=$('#dttm').val();
                         //alert ("distance :"+ distance_in_kilo +" kms " + "fare: "+ fare )
+						
                         $('#ticket').text('From :'+origin+
-                        " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\n Date-Time:"+ dttm_val);
+                        " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\nDate-Time:"+ dttm_val);
                        $('#Buyticket').data('item-quantity', distance_in_kilo);
+			 $('#Buyticket').data('item-name', origin +"::to::" +destination);
+					   
+						document.getElementById('welcomeDiv').style.display = "block";
+						}
                       }
                     }
                   }
