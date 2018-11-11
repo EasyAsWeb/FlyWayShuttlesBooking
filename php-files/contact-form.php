@@ -1,6 +1,6 @@
 <?php
 
-	$to = 'booking@flywayshuttles.co.nz';  // please change this email id
+	$to = 'bookings@flywayshuttles.co.nz';  // please change this email id
 	$subject = 'Contact Form : Flyway Shuttles';
 
 
