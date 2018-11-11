@@ -1,7 +1,7 @@
 <?php
 
-	$to = 'info@themewagon.com';  // please change this email id
-	$subject = 'Contact Form : Rights Non-Profit Website';
+	$to = 'booking@flywayshuttles.co.nz';  // please change this email id
+	$subject = 'Contact Form : Flyway Shuttles';
 
 
 	$errors = array();
