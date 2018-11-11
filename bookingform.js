@@ -3,8 +3,8 @@ min_date.setMinutes(min_date.getMinutes()-0.5);
 var errc=0; 
 
 var auklandBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(-37.047271, 174.498540),//southwest
-    new google.maps.LatLng(-36.622040, 175.273216));//north east
+    new google.maps.LatLng(-37.186146, 174.382554),//southwest
+    new google.maps.LatLng(-36.553339, 175.251847));//north east
  
   $(document).ready(function() {
     
