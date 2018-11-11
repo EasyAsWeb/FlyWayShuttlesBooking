@@ -198,6 +198,14 @@
                           </div>
                         </div>
 						</div>
+						<div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="InputName" class="dark-text">PHONE NUMBER* will be used by shuttle service to contact passenger<super><super></label>
+                        <input type="text" class="form-control form-control-dark" id="phno" name="phno" placeholder="Passenger Phone Number" required>
+                      </div>
+                    </div>
+					</div>
 					<div class="row">
                         <div class="col-lg-4" >
                           <div class="form-group">
@@ -230,8 +238,8 @@
                             data-item-custom1-name="Number of Passengers"
                             data-item-custom1-options="1- 4|5[+.3]|6[+.6]|7[+.9]|8[+1.2]|9[+1.5]|10[+1.8]|11[+2.1]"
                             data-item-min-quantity="1"
-                            data-item-max-quantity="200"
-                            data-item-quantity-step="200"
+                            data-item-max-quantity="400"
+                            data-item-quantity-step="400"
                             data-item-description="Ticket">
                             PROCEED TO PAYMENT
                           </button>
@@ -250,7 +258,7 @@
                     var min_date= new Date();
                     min_date.setMinutes(min_date.getMinutes()+120);
                     $('#dttm').datetimepicker({
-                      format: 'YYYY-MM-DD hh:mm A',
+                      format: 'YYYY-MM-DD HH:mm ',
                       minDate: min_date,
 
                     });

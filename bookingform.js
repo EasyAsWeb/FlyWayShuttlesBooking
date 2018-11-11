@@ -2,15 +2,19 @@ var min_date= new Date();
 min_date.setMinutes(min_date.getMinutes()-0.5); 
 var errc=0; 
 
-
+var auklandBounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(-37.047271, 174.498540),//southwest
+    new google.maps.LatLng(-36.622040, 175.273216));//north east
  
   $(document).ready(function() {
     
    
         var options = {
           componentRestrictions: {
-            country: 'nz'
-          }
+		  country: 'nz'},
+			bounds: auklandBounds,
+          strictBounds: true
+          
         };
         var original = document.getElementById('Origin');
         var destiny = document.getElementById('Destination');
@@ -18,27 +22,27 @@ var errc=0;
         var to_places = new google.maps.places.Autocomplete(destiny, options);
         google.maps.event.addListener(from_places, 'place_changed', function() {
             
-            var from_place = from_places.getPlace();
-            var from_address = from_place.formatted_address;
-            $('#Origin').val(from_address);
+           // var from_place = from_places.getPlace();
+          //  var from_address = from_place.formatted_address;
+           // $('#Origin').val(from_address);
           });
           google.maps.event.addListener(to_places, 'place_changed', function() {
             
-            var to_place = to_places.getPlace();
-            var to_address = to_place.formatted_address;
-            $('#Destination').val(to_address);
+           // var to_place = to_places.getPlace();
+           // var to_address = to_place.formatted_address;
+           // $('#Destination').val(to_address);
           });
    
           $('#DisatnceFare').on('click', function() { 
 
                 
-                var origin = $('#Origin').val();
-                var destination = $('#Destination').val();
+                var origin1 = $('#Origin').val();
+                var destination1 = $('#Destination').val();
                 var service = new google.maps.DistanceMatrixService();
                 
                 service.getDistanceMatrix({
-                    origins: [origin],
-                    destinations: [destination],
+                    origins: [origin1],
+                    destinations: [destination1],
                     travelMode: google.maps.TravelMode.DRIVING,
                     // unitSystem: google.maps.UnitSystem.IMPERIAL, // miles and feet.
                     unitSystem: google.maps.UnitSystem.metric, // kilometers and meters.
@@ -58,8 +62,10 @@ var errc=0;
                       if (response.rows[0].elements[0].status === "ZERO_RESULTS") {
                         $('#result').html("Better get on a plane. There are no roads between " + origin + " and " + destination);
                       } else {
+						  var phno=$('#phno').val();
 						if (origin.length ==0){alert ("Enter Valid Origin "); }
 						else if (destination.length == 0){alert ("Enter Valid Destination ");}
+						else if (phno.length == 0){alert ("Enter contact number ");}
 						else {
 						  
                         var distance = response.rows[0].elements[0].distance;
@@ -75,12 +81,13 @@ var errc=0;
                         var duration_value = duration.value;
                         trip_duration = duration.text;
                         var dttm_val=$('#dttm').val();
+						
                         //alert ("distance :"+ distance_in_kilo +" kms " + "fare: "+ fare )
 						
-                        $('#ticket').text('From :'+origin+
-                        " \nTo :" + destination +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\nDate-Time:"+ dttm_val);
+                        $('#ticket').text('From :'+origin1+
+                        " \nTo :" + destination1 +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\nDate-Time:"+ dttm_val+ "\nContact Phone Number:"+ phno);
                        $('#Buyticket').data('item-quantity', distance_in_kilo);
-			 $('#Buyticket').data('item-name', origin +"::to::" +destination);
+			 $('#Buyticket').data('item-name',phno+" / "+dttm_val+" / "+ origin1 +"::to::" +destination1);
 					   
 						document.getElementById('welcomeDiv').style.display = "block";
 						}
