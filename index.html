@@ -169,278 +169,288 @@
 
               <form>
                 <fieldset id="fieldsetRoute">
-				 <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="InputName" class="dark-text">ORIGIN<super>*<super></label>
-                        <input type="text" class="form-control form-control-dark" id="Origin" name="Origin" placeholder="Enter Origin" required>
-                      </div>
-                    </div>
-					</div>
-					
-					<div class="row">
+                  <div class="row">
                     <div class="col-md-4">
                       <div class="form-group">
-                        <label for="InputName" class="dark-text">DESTINATION<super>*<super></label>
-                          <input type="text" class="form-control form-control-dark" id="Destination" name="Destination" placeholder="Enter Destination" required>
+                        <label for="InputName" class="dark-text">ORIGIN<super>*<super></label>
+                          <input type="text" class="form-control form-control-dark" id="Origin" name="Origin" placeholder="Enter Origin" required>
                         </div>
                       </div>
-					  </div>
-					  
-					<div class="row">
                       <div class="col-lg-4" >
-                        <div class="form-group">
+                        <div class="form-group" class="input-group date" id='datetimepicker1'>
 
-                          <label for="InputName" class="dark-text">PICKUP DATE &amp; TIME<super>*<super></label><br>
+                          <label for="InputName" class="dark-text">DATE &amp; TIME FOR PICK-UP<super>*<super></label><br>
                             <input type="text"  name="dttm" id="dttm" data-date-max-date="3000-12-31" class="form-control input-sm" required placeholder="Enter Date and Time"/>
                             <br>
+                          </div>
+                        </div>
+                    <!--    <div class="col-lg-4" >
+                          <label>Pick Up Date/Time: </label>
+                          <div class="input-group date" id='datetimepicker1'>
+                            <input id="datetimepick" type='text' class="form-control" />
+                            <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                          </div>
+                        </div> -->
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="InputName" class="dark-text">DESTINATION<super>*<super></label>
+                              <input type="text" class="form-control form-control-dark" id="Destination" name="Destination" placeholder="Enter Destination" required>
+                            </div>
+
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                              <label for="InputName" class="dark-text">PHONE NUMBER <super>*<super></label>
+                                <input type="text" class="form-control form-control-dark" id="phno" name="phno" placeholder="Passenger Phone Number" required>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="col-lg-4" >
+                              <div class="form-group">
+
+
+                                <BUTTON   id="DisatnceFare" name="DisatnceFare" class="btn btn-charity-default" type="button" title="" > SUBMIT
+
+                                </BUTTON>
+                                <br>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="welcomeDiv"  style="display:none;" class="row">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <label for="message" class="dark-text"> TRIP SUMMARY</label>
+
+                                <textarea readonly id='ticket' rows="4" cols="50" class="form-control form-control-dark" >
+
+                                </textarea>
+
+                                <button
+                                class="snipcart-add-item btn btn-charity-default btn-dark btn-block"
+                                id= 'Buyticket'
+                                data-item-id="2"
+                                data-item-name="Ticket"
+                                data-item-price="3.00"
+                                data-item-quantity="1"
+                                data-item-url="https://flywayshuttles.co.nz"
+                                data-item-custom1-name="Number of Passengers"
+                                data-item-custom1-options="1- 4|5[+.3]|6[+.6]|7[+.9]|8[+1.2]|9[+1.5]|10[+1.8]|11[+2.1]"
+                                data-item-min-quantity="1"
+                                data-item-max-quantity="400"
+                                data-item-quantity-step="400"
+                                data-item-description="Ticket">
+                                PROCEED TO PAYMENT
+                              </button>
+
+                            </div>
 
                           </div>
                         </div>
-						</div>
-						<div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="InputName" class="dark-text">PHONE NUMBER* will be used by shuttle service to contact passenger<super><super></label>
-                        <input type="text" class="form-control form-control-dark" id="phno" name="phno" placeholder="Passenger Phone Number" required>
+
+
+                      </fieldset>
+                    </form>
+
+
+
+                    <script>
+                      var min_date= new Date();
+                      min_date.setMinutes(min_date.getMinutes()+120);
+                      $('#dttm').datetimepicker({
+                        format: 'YYYY-MM-DD HH:mm ',
+                        minDate: min_date,
+
+                      });
+                    </script>
+
+
+
+
+                  </div>
+                </div>
+                <BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                </section>
+
+                <section id="how" class="section pad-regular bg-light">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="contactus-brief">
+                          <BR><BR><BR>
+                            <h3 style = "text-align:center">HOW IT WORKS</h3>
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-7 col-md-push-5 col-sm-12 almost-white-bg same-height-colum">
+                          <img src="assets/images/get_started/2_get_involved.png" class="img-responsive" alt="Get Involved">
+                        </div>
+                        <div class="col-md-5 col-md-pull-7 col-sm-12">
+                          <h3>IT'S SIMPLE</h3>
+                          <br>
+                          <p>We know that organising airport transfers can be a tedious task, one often left until the last moment. With Flyway Shuttles, you can do an instant booking and then just relax. You decide the pick-up and drop-off locations choose the date and time that suits your travel plans and confirm the reservation by paying online. Your trusted shuttle driver arrives in time and takes you to your destination. </p>
+                          <br>
+                          <a href="#booking" class="btn btn-charity-default">BOOK NOW</a>
+                        </div>
                       </div>
                     </div>
-					</div>
-					<div class="row">
-                        <div class="col-lg-4" >
-                          <div class="form-group">
+                  </section>
 
+                  <section id="destinations">
+                    <section class="section pad-regular bg-default">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <div class="contactus-brief">
+                              <BR><BR><BR>
+                                <h3 style = "text-align:center">AUCKLAND DAY TRIPS</h3>
 
-                            <BUTTON   id="DisatnceFare" name="DisatnceFare" class="btn btn-charity-default" type="button" title="" > SUBMIT
+                              </div>
+                            </div>
+                          </div>
 
-                            </BUTTON>
-                            <br>
+                          <div class="row">
+                            <div class="col-md-7 col-sm-12 almost-white-bg same-height-colum">
+                              <img src="assets/images/get_started/3_get_involved.jpg" class="img-responsive" alt="Get Involved">
+                            </div>
+                            <div class="col-md-5 col-sm-12">
+                              <h3>HOBBITON</h3>
+                              <br>
+                              <p>Hobbiton is a movie set location for the fictional Hobbiton Village created in the Lord of the Rings and Hobbit movies. Located on a farm near Matamata, the Hobbiton movie sets and Hobbit holes have been left set up and are a popular tourist attraction with regular tours available.</p>
+                              <br>
+                              <a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
+                            </div>
                           </div>
                         </div>
-					</div>
-					<div id="welcomeDiv"  style="display:none;" class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group">
-                            <label for="message" class="dark-text"> TRIP SUMMARY</label>
+                      </section>
 
-                            <textarea readonly id='ticket' rows="4" cols="50" class="form-control form-control-dark" >
-
-                            </textarea>
-
-                            <button
-                            class="snipcart-add-item btn btn-charity-default btn-dark btn-block"
-                            id= 'Buyticket'
-                            data-item-id="2"
-                            data-item-name="Ticket"
-                            data-item-price="3.00"
-                            data-item-quantity="1"
-                            data-item-url="https://flywayshuttles.co.nz"
-                            data-item-custom1-name="Number of Passengers"
-                            data-item-custom1-options="1- 4|5[+.3]|6[+.6]|7[+.9]|8[+1.2]|9[+1.5]|10[+1.8]|11[+2.1]"
-                            data-item-min-quantity="1"
-                            data-item-max-quantity="400"
-                            data-item-quantity-step="400"
-                            data-item-description="Ticket">
-                            PROCEED TO PAYMENT
-                          </button>
+                      <section class="section pad-regular bg-default">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-7 col-md-push-5 col-sm-12 almost-white-bg same-height-colum">
+                              <img src="assets/images/get_started/4_get_involved.jpg" class="img-responsive" alt="Get Involved">
+                            </div>
+                            <div class="col-md-5 col-md-pull-7 col-sm-12">
+                              <h3>WAITOMO</h3>
+                              <br>
+                              <p>Waitomo is known for its extensive underground cave systems. Thousands of glow-worms light up the Glow-worm Caves. The vast Ruakuri Cave features waterfalls and limestone formations. Northeast of the Waitomo village, Otorohanga Kiwi House shelters several species of the rare native kiwi bird.</p>
+                              <br>
+                              <a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
+                            </div>
+                          </div>
                         </div>
+                      </section>
 
-                      </div>
-					  </div>
+                      <section class="section pad-regular bg-default">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-7 col-sm-12 almost-white-bg same-height-colum">
+                              <img src="assets/images/get_started/5_get_involved.jpg" class="img-responsive" alt="Get Involved">
+                            </div>
+                            <div class="col-md-5 col-sm-12">
+                              <h3>ROTORUA</h3>
+                              <br>
+                              <p>Rotorua is renowned for its geothermal activity and Maori culture. In the Whakarewarewa Valley, there are bubbling mud pools and the world famous 30m-tall Pohutu Geyser, which erupts many times daily. It’s also home to a living Maori village and the New Zealand Maori Arts and Crafts Institute, with traditional wood carving and weaving schools.</p>
+                              <br>
+                              <a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
 
+                    <section id="daytripbooking" class="section bg-default default-section-padding">
+                      <div class="container">
+                        <div class="row">
+                          <div class="contact-form">
+                            <form action="php-files/contact-form.php" id="contactForm" method="post" accept-charset="utf-8">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <label for="InputName" class="dark-text">Your Display Name <super>*<super></label>
+                                    <input type="text" class="form-control form-control-dark" name="name" id="InputName" placeholder="Jane Doe" required>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <label for="InputEmail" class="dark-text">Your Email Address <super>*<super></label>
+                                      <input type="email" class="form-control form-control-dark" name="email" id="InputEmail" placeholder="john@example.com" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label for="InputPhoneNumber" class="dark-text">Your Phone Number</label>
+                                      <input type="number"  class="form-control form-control-dark" name="contact_number" id="InputPhoneNumber" placeholder="123-456-789">
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-12">
+                                    <div class="form-group">
+                                      <label for="message" class="dark-text">Your Message <super>*<super></label>
+                                        <textarea  id="message" class="form-control form-control-dark" rows="3" name="message" placeholder="Your Message Here.." required></textarea>
+                                      </div>
+                                      <input id="cfsubmit" type="submit" name="submit" value="SEND MESSAGE" href="#" class="btn btn-charity-default" title="">
+                                    </div>
 
-                    </fieldset>
-                  </form>
+                                    <div id="contactFormResponse"></div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                          </section>
 
-
-
-                  <script>
-                    var min_date= new Date();
-                    min_date.setMinutes(min_date.getMinutes()+120);
-                    $('#dttm').datetimepicker({
-                      format: 'YYYY-MM-DD HH:mm ',
-                      minDate: min_date,
-
-                    });
-                  </script>
-				  
-				  
-
-
-                </div>
-              </div>
-            </section>
-			
-			<section id="how" class="section pad-regular bg-light">
-	<div class="container">
-				              <div class="row">
-              <div class="col-xs-12">
-                <div class="contactus-brief">
-                  <BR><BR><BR>
-                    <h3 style = "text-align:center">HOW IT WORKS</h3>
-
-                  </div>
-                </div>
-              </div>
-	
-		<div class="row">
-			<div class="col-md-7 col-md-push-5 col-sm-12 almost-white-bg same-height-colum">
-				<img src="assets/images/get_started/2_get_involved.png" class="img-responsive" alt="Get Involved">
-			</div>
-			<div class="col-md-5 col-md-pull-7 col-sm-12">
-				<h3>IT'S SIMPLE</h3>
-				<br>
-				<p>We know that organising airport transfers can be a tedious task, one often left until the last moment. With Flyway Shuttles, you can do an instant booking and then just relax. You decide the pick-up and drop-off locations choose the date and time that suits your travel plans and confirm the reservation by paying online. Your trusted shuttle driver arrives in time and takes you to your destination. </p>
-				<br>
-				<a href="#booking" class="btn btn-charity-default">BOOK NOW</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="destinations">
-<section class="section pad-regular bg-default">
-	<div class="container">
-					              <div class="row">
-              <div class="col-xs-12">
-                <div class="contactus-brief">
-                  <BR><BR><BR>
-                    <h3 style = "text-align:center">AUCKLAND DAY TRIPS</h3>
-
-                  </div>
-                </div>
-              </div>
-	
-		<div class="row">
-			<div class="col-md-7 col-sm-12 almost-white-bg same-height-colum">
-				<img src="assets/images/get_started/3_get_involved.jpg" class="img-responsive" alt="Get Involved">
-			</div>
-			<div class="col-md-5 col-sm-12">
-				<h3>HOBBITON</h3>
-				<br>
-				<p>Hobbiton is a movie set location for the fictional Hobbiton Village created in the Lord of the Rings and Hobbit movies. Located on a farm near Matamata, the Hobbiton movie sets and Hobbit holes have been left set up and are a popular tourist attraction with regular tours available.</p>
-				<br>
-				<a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section pad-regular bg-default">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-md-push-5 col-sm-12 almost-white-bg same-height-colum">
-				<img src="assets/images/get_started/4_get_involved.jpg" class="img-responsive" alt="Get Involved">
-			</div>
-			<div class="col-md-5 col-md-pull-7 col-sm-12">
-				<h3>WAITOMO</h3>
-				<br>
-				<p>Waitomo is known for its extensive underground cave systems. Thousands of glow-worms light up the Glow-worm Caves. The vast Ruakuri Cave features waterfalls and limestone formations. Northeast of the Waitomo village, Otorohanga Kiwi House shelters several species of the rare native kiwi bird.</p>
-				<br>
-				<a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section pad-regular bg-default">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-sm-12 almost-white-bg same-height-colum">
-				<img src="assets/images/get_started/5_get_involved.jpg" class="img-responsive" alt="Get Involved">
-			</div>
-			<div class="col-md-5 col-sm-12">
-				<h3>ROTORUA</h3>
-				<br>
-				<p>Rotorua is renowned for its geothermal activity and Maori culture. In the Whakarewarewa Valley, there are bubbling mud pools and the world famous 30m-tall Pohutu Geyser, which erupts many times daily. It’s also home to a living Maori village and the New Zealand Maori Arts and Crafts Institute, with traditional wood carving and weaving schools.</p>
-				<br>
-				<a href="#daytripbooking" class="get-started-btn btn btn-charity-default">BOOK NOW</a>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-
-<section id="daytripbooking" class="section bg-default default-section-padding">
-	<div class="container">
-		<div class="row">
-			<div class="contact-form">
-				<form action="php-files/contact-form.php" id="contactForm" method="post" accept-charset="utf-8">
-					<div class="col-md-4">
-				  		<div class="form-group">
-							<label for="InputName" class="dark-text">Your Display Name <super>*<super></label>
-							<input type="text" class="form-control form-control-dark" name="name" id="InputName" placeholder="Jane Doe" required>
-						</div>
-					</div>
-					<div class="col-md-4">
-				  		<div class="form-group">
-							<label for="InputEmail" class="dark-text">Your Email Address <super>*<super></label>
-							<input type="email" class="form-control form-control-dark" name="email" id="InputEmail" placeholder="john@example.com" required>
-						</div>
-					</div>
-					<div class="col-md-4">
-				  		<div class="form-group">
-							<label for="InputPhoneNumber" class="dark-text">Your Phone Number</label>
-							<input type="number"  class="form-control form-control-dark" name="contact_number" id="InputPhoneNumber" placeholder="123-456-789">
-						</div>
-					</div>
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label for="message" class="dark-text">Your Message <super>*<super></label>
-							<textarea  id="message" class="form-control form-control-dark" rows="3" name="message" placeholder="Your Message Here.." required></textarea>
-						</div>
-						<input id="cfsubmit" type="submit" name="submit" value="SEND MESSAGE" href="#" class="btn btn-charity-default" title="">
-					</div>
-					
-					<div id="contactFormResponse"></div>
-				</form>
-			</div>	
-		</div>
-	</div>
-	<br>
-</section>
-
-          <footer id="footer" class="section footer">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 col-sm-6">
-                  <a>Powered by</a> <p href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</p>
-                </div>
-              </div>
-            </div>
-          </footer> <!-- /.footer -->
+                          <footer id="footer" class="section footer">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                  <a>Powered by</a> <p href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</p>
+                                </div>
+                              </div>
+                            </div>
+                          </footer> <!-- /.footer -->
 
 
 
-        </div><!--/main container-->
+                        </div><!--/main container-->
 
 
 
 
-        <!-- Javascripts  -->
+                        <!-- Javascripts  -->
 
-        <script src="assets/lib/components-modernizr/modernizr.js"></script>
-        <script src="assets/lib/jquery/dist/jquery.js"></script>
-        <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
-        <script src="assets/extras/swipebox/js/jquery.swipebox.min.js"></script>
-        <script src="assets/extras/rotating-carousel/js/jquery.gallery.js"></script>
-        <script src="assets/extras/slick/slick.js"></script>
-        <script src="assets/extras/magnificpopup/jquery.magnific-popup.min.js"></script>
-        <script src="assets/extras/scrollspeed/jQuery.scrollSpeed.js"></script>
+                        <script src="assets/lib/components-modernizr/modernizr.js"></script>
+                        <script src="assets/lib/jquery/dist/jquery.js"></script>
+                        <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+                        <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+                        <script src="assets/lib/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+                        <script src="assets/extras/swipebox/js/jquery.swipebox.min.js"></script>
+                        <script src="assets/extras/rotating-carousel/js/jquery.gallery.js"></script>
+                        <script src="assets/extras/slick/slick.js"></script>
+                        <script src="assets/extras/magnificpopup/jquery.magnific-popup.min.js"></script>
+                        <script src="assets/extras/scrollspeed/jQuery.scrollSpeed.js"></script>
 
 
 
-        <script src="assets/lib/waypoints/lib/jquery.waypoints.min.js"></script>
-        <script src="assets/lib/waypoints/lib/shortcuts/inview.min.js"></script>
-        <script src="assets/lib/countdown/dest/jquery.countdown.min.js"></script>
+                        <script src="assets/lib/waypoints/lib/jquery.waypoints.min.js"></script>
+                        <script src="assets/lib/waypoints/lib/shortcuts/inview.min.js"></script>
+                        <script src="assets/lib/countdown/dest/jquery.countdown.min.js"></script>
 
-        <script src="assets/js/main.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDaqml-GXgNO5R6nO4g3X78HNjJ7TqeUPo&libraries=places"></script>
-        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="OTc2YjgyMWUtYmZjOC00OWYxLTlhZTktYmZmZWYwYzA0MDExNjM2NzYxNzY3OTI0ODIyMTcx"></script>
-        <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-        <script src="bookingform.js"></script>
+                        <script src="assets/js/main.js"></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDaqml-GXgNO5R6nO4g3X78HNjJ7TqeUPo&libraries=places"></script>
+                        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="OTc2YjgyMWUtYmZjOC00OWYxLTlhZTktYmZmZWYwYzA0MDExNjM2NzYxNzY3OTI0ODIyMTcx"></script>
+                        <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+                        <script src="bookingform.js"></script>
 
-      </body>
-      </html>
+                      </body>
+                      </html>
