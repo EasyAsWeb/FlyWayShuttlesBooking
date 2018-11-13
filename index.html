@@ -206,8 +206,8 @@
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
-                              <label for="InputName" class="dark-text">PHONE NUMBER<super>*<super></label>
-                                <input type="text" class="form-control form-control-dark" id="phno" name="phno" placeholder="Passenger Phone Number" required>
+                              <label for="InputName" type="number" class="dark-text">PHONE NUMBER<super>*<super></label>
+                                <input type="text" class="form-control form-control-dark" id="phno" name="phno" placeholder="Passenger Phone Number" required onkeypress="return isNumberKey(event)">
                               </div>
                             </div>
                           </div>
@@ -260,9 +260,14 @@
 
                       </fieldset>
                     </form>
-
-
-
+ <script>
+					function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+ </script>
                     <script>
                       var min_date= new Date();
                       min_date.setMinutes(min_date.getMinutes()+120);
@@ -450,7 +455,8 @@
                         <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDaqml-GXgNO5R6nO4g3X78HNjJ7TqeUPo&libraries=places"></script>
                         <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="OTc2YjgyMWUtYmZjOC00OWYxLTlhZTktYmZmZWYwYzA0MDExNjM2NzYxNzY3OTI0ODIyMTcx"></script>
                         <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-                        <script src="bookingform.js"></script>
+                        <script src="js/bookingform.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
                       </body>
                       </html>
