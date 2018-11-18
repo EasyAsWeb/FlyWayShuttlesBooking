@@ -11,20 +11,16 @@
   <title>FlyWay Shuttles</title>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <link href= "http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.js"></script>
-  <link href= "https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.css" rel="stylesheet">
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css rel="stylesheet"/>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="https://momentjs.com/downloads/moment.min.js"></script>
-  <!-- Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <!-- DatePicker JQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+   <!-- date time picker
+    ============================================= --> 
+ <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+	
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script> 
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 
   <!-- favicons
     ============================================= -->
@@ -267,16 +263,21 @@
         return false;
     return true;
 }
- </script>
-                    <script>
-                      var min_date= new Date();
-                      min_date.setMinutes(min_date.getMinutes()+120);
-                      $('#dttm').datetimepicker({
-                        format: 'YYYY-MM-DD HH:mm ',
-                        minDate: min_date,
-
-                      });
-                    </script>
+</script>
+<script type='text/javascript'>
+		$( document ).ready(function() {
+		var min_date= new Date();
+		min_date.setDate(min_date.getDate()+1);
+                    //min_date.setMinutes(min_date.getMinutes()+120);
+		min_date.setHours(00,01);			
+		//min_date.setMinutes(00);			
+			$('#dttm').datetimepicker({
+			format: 'YYYY-MM-DD hh:mm A',
+                      minDate: min_date
+			
+			});
+		});
+	</script>
 
 
 
