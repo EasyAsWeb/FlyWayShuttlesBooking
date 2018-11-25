@@ -84,12 +84,22 @@ var auklandBounds = new google.maps.LatLngBounds(
 						
                         //alert ("distance :"+ distance_in_kilo +" kms " + "fare: "+ fare )
 						
-                        $('#ticket').text('From :'+origin1+
-                        " \nTo :" + destination1 +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: "+ fare + "\nDate-Time:"+ dttm_val+ "\nContact Phone Number:"+ phno);
+                        
                        $('#Buyticket').data('item-quantity', distance_in_kilo);
-			 $('#Buyticket').data('item-name',phno+" / "+dttm_val+" / "+ origin1 +"::to::" +destination1);
-					   
+			           $('#Buyticket').data('item-name',phno+" / "+dttm_val+" / "+ origin1 +"::to::" +destination1);
+					   $('#Buyticket1').data('item-name',phno+" / "+dttm_val+" / "+ origin1 +"::to::" +destination1);
+					   if (distance_in_kilo>10) {
+						   document.getElementById('welcomeDiv1').style.display = "none";
+						 $('#ticket').text('From :'+origin1+
+                        " \nTo :" + destination1 +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: $"+ fare + "\nDate-Time:"+ dttm_val+ "\nContact Phone Number:"+ phno);  
 						document.getElementById('welcomeDiv').style.display = "block";
+					   }
+					   if (distance_in_kilo<=10) {
+						 document.getElementById('welcomeDiv').style.display = "none";
+						$('#ticket1').text('From :'+origin1+
+                        " \nTo :" + destination1 +"\nDistance :"+ distance_in_kilo +" kms " + "\nFare: $30(fixed fare below 10 kms) "  + "\nDate-Time:"+ dttm_val+ "\nContact Phone Number:"+ phno);
+						document.getElementById('welcomeDiv1').style.display = "block";
+					   }
 						}
                       }
                     }
