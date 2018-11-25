@@ -113,9 +113,9 @@
             <li>
               <a href="#destinations"><span>Auckland Day Trips</span></a>
             </li>
-         <!--   <li>
+            <li>
               <a href="#contact"><span>Contact Us</span></a>
-            </li> -->
+            </li>
             <li>
               <a href="#booking" class="btn btn-charity-default">BOOK NOW</a>
             </li>
@@ -239,6 +239,37 @@
                         data-item-url="https://flywayshuttles.co.nz"
                         data-item-custom1-name="Number of Passengers"
                         data-item-custom1-options="1- 4|5[+.3]|6[+.6]|7[+.9]|8[+1.2]|9[+1.5]|10[+1.8]|11[+2.1]"
+                        data-item-min-quantity="10"
+                        data-item-max-quantity="400"
+                        data-item-quantity-step="400"
+                        data-item-description="Ticket">
+                        PROCEED TO PAYMENT
+                      </button>
+
+                    </div>
+
+                  </div>
+                </div>
+
+ <div id="welcomeDiv1"  style="display:none;" class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="message" class="dark-text"> TRIP SUMMARY</label>
+
+                        <textarea readonly id='ticket1' rows="4" cols="50" class="form-control form-control-dark" >
+
+                        </textarea>
+
+                        <button
+                        class="snipcart-add-item btn btn-charity-default btn-dark btn-block"
+                        id= 'Buyticket1'
+                        data-item-id="3"
+                        data-item-name="Ticket"
+                        data-item-price="1.00"
+                        data-item-quantity="1"
+                        data-item-url="https://flywayshuttles.co.nz"
+                        data-item-custom1-name="Number of Passengers"
+                        data-item-custom1-options="1- 4|5[+3]|6[+6]|7[+9]|8[+12]|9[+15]|10[+18]|11[+21]"
                         data-item-min-quantity="1"
                         data-item-max-quantity="400"
                         data-item-quantity-step="400"
@@ -251,7 +282,7 @@
                   </div>
                 </div>
 
-
+			
               </fieldset>
             </form>
             <script>
@@ -377,18 +408,8 @@
 
           <section id = "daytripbooking" class="section bg-default default-section-padding" >
             <div class="container">
-			          <div class="row">
-            <div class="col-xs-12">
-              <div class="contactus-brief">
-                <BR><BR><BR><BR><BR><BR><BR>
-                  <h3 style = "text-align:center">BOOK A DAY TRIP</h3>
-
-                </div>
-              </div>
-            </div>
-
               <div class="row">
-			  
+			  <BR><BR><BR><BR>
                 <form method="post" action="https://formspree.io/bookings@flywayshuttles.co.nz">
                   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" class="form-group">
                     <label class="sr-only" for="name">Name</label>
@@ -423,7 +444,7 @@
 				  -->
 				<div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" class="form-group">
-                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="A short message about your trip *" required="required" data-validation-required-message="Please enter your message."></textarea>
+                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Short message about your trip *" required="required" data-validation-required-message="Please enter your message."></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
 				   </div>
@@ -448,11 +469,10 @@
                     <div class="office map">
                       <p>
 
-                        <br><br><br><br>
+                        <br>
                         Email: bookings@flywayshuttles.co.nz
-                        <br><br>
+                        <br>
                         Phone: +64 21 164 8646
-						<br><br><br><br>
                       </p>
 
                     </div>
@@ -495,7 +515,7 @@
                 <div class="col-md-4 col-sm-6">
 
                   <div class="contact-wigets-area">
-                    <td> Powered by  &#58;</td> <a href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</a>
+                    <a>Powered by</a> <p href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</p>
                   </div>
 
                 </div>
@@ -531,9 +551,8 @@
 
         <script src="assets/js/main.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDaqml-GXgNO5R6nO4g3X78HNjJ7TqeUPo&libraries=places"></script>
-<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YzcwMTU1YzMtMzZiMC00MmZjLWJjNTItNzQyMDQxNDYyZGIwNjM2NzYxNzY3OTI0ODIyMTcx"></script>
-
-<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="OTc2YjgyMWUtYmZjOC00OWYxLTlhZTktYmZmZWYwYzA0MDExNjM2NzYxNzY3OTI0ODIyMTcx"></script>
+        <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
         <script src="js/bookingform.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 
