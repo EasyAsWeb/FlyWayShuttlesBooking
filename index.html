@@ -113,9 +113,9 @@
             <li>
               <a href="#destinations"><span>Auckland Day Trips</span></a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#contact"><span>Contact Us</span></a>
-            </li>
+            </li> -->
             <li>
               <a href="#booking" class="btn btn-charity-default">BOOK NOW</a>
             </li>
@@ -408,22 +408,31 @@
 
           <section id = "daytripbooking" class="section bg-default default-section-padding" >
             <div class="container">
+			              <div class="row">
+                <div class="col-xs-12">
+                  <div class="contactus-brief">
+                    <BR><BR><BR><BR><BR>
+                      <h3 style = "text-align:center">BOOK A DAY TRIP</h3>
+
+                    </div>
+                  </div>
+                </div>
               <div class="row">
 			  <BR><BR><BR><BR>
                 <form method="post" action="https://formspree.io/bookings@flywayshuttles.co.nz">
                   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" class="form-group">
                     <label class="sr-only" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Your Name*" required="required" data-validation-required-message="Please enter your name."/>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name."/>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" class="form-group">
                     <label class="sr-only" for="phone">Mobile Phone</label>
-                    <input class="form-control" type="text" id="phone" name="phone" placeholder="Your Phone*" required="required" data-validation-required-message="Please enter your mobile phone number."/>
+                    <input class="form-control" type="text" id="phone" name="phone" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your mobile phone number."/>
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" class="form-group">
                     <label class="sr-only" for="email">Email</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Your Email*" required="required" data-validation-required-message="Please enter your email address."/>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address."/>
                     <p class="help-block text-danger"></p>
                   </div>
 				  </div>
@@ -444,14 +453,14 @@
 				  -->
 				<div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" class="form-group">
-                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Short message about your trip *" required="required" data-validation-required-message="Please enter your message."></textarea>
+                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="A short message about your day trip *" required="required" data-validation-required-message="Please enter your message."></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
 				   </div>
                   <br>
                   <div class="text-center" >
                     <button id="cfsubmit" type="submit" name="_next" value="/thankyou.html" class="btn btn-charity-default"> SUBMIT </button>
-					<BR><BR>
+					<BR><BR><BR>
                   </div>
                 </div>
               </div>
@@ -469,10 +478,11 @@
                     <div class="office map">
                       <p>
 
+                        <br><br><br>
+                        &nbsp; Email: bookings@flywayshuttles.co.nz
                         <br>
-                        Email: bookings@flywayshuttles.co.nz
-                        <br>
-                        Phone: +64 21 164 8646
+                        &nbsp; Phone: +64 21 164 8646
+						<br><br><br><br><br>
                       </p>
 
                     </div>
@@ -515,7 +525,7 @@
                 <div class="col-md-4 col-sm-6">
 
                   <div class="contact-wigets-area">
-                    <a>Powered by</a> <p href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</p>
+                    <td>Powered by &#58;</td> <a href="https://easyasweb.co.nz/" class="copyright">Easy As Web Solutions</a>
                   </div>
 
                 </div>
